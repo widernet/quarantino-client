@@ -14,4 +14,9 @@ Gem::Specification.new do |gem|
   gem.name          = "quarantino"
   gem.require_paths = ["lib"]
   gem.version       = Quarantino::VERSION
+
+  gem.add_dependency "faraday"
+  gem.add_dependency "json"
+  gem.add_development_dependency "rspec", ">= 1.2.9"
+  gem.add_development_dependency "webmock"
 end
