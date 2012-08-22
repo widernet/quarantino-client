@@ -21,7 +21,7 @@ module Quarantino
 			  req.url '/reports'
 			  req.headers['Content-Type'] = 'application/json'
 			  req.headers['X-API-Key'] = ENV['QUARANTINO_API_KEY'] if ENV['QUARANTINO_API_KEY']
-			  req.body = {session_attributes: params}.to_json
+			  req.body = {report: {session_attributes: params}}.to_json
 			end
 
 			JSON.parse(response.body)
